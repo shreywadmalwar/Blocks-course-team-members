@@ -1,15 +1,56 @@
 {
 	"apiVersion": 2,
-	"name": "create-block/boilerplate",
-	"title": "Boilerplate",
-	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"name": "blocks-course/team-members",
+	"title": "Team Members",
+	"category": "media",
+	"icon": "groups",
+	"description": "A team members grid.",
+	"keywords": ["Team", "Members", "Grid"],
 	"supports": {
-		"html": false
+		"html": false,
+		"align": ["wide"]
 	},
-	"textdomain": "boilerplate",
+	"textdomain": "team-members",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
-	"style": "file:./build/style-index.css"
+	"style": "file:./build/style-index.css",
+	"attributes": {
+		"columns": {
+			"type": "number",
+			"default": 2
+		}
+	},
+	"example": {
+		"attributes": {
+			"columns": 2
+		},
+		"innerBlocks": [
+			{
+				"name": "blocks-course/team-member",
+				"attributes": {
+					"name": "Carry Minati",
+					"bio": "Ajey Nagar, better known as CarryMinati, is an Indian YouTuber, streamer and rapper from Faridabad, India.",
+					"url": "",
+					"sociallinks": [
+						{ "icon": "facebook" },
+						{ "icon": "instagram" },
+						{ "icon": "twitter" }
+					]
+				}
+			},
+			{
+				"name": "blocks-course/team-member",
+				"attributes": {
+					"name": "Flying Beast",
+					"bio": "Gaurav Taneja earned a gold medal in his first-ever bodybuilding competition a year later, in September 2013.",
+					"url": "",
+					"sociallinks": [
+						{ "icon": "facebook" },
+						{ "icon": "instagram" },
+						{ "icon": "twitter" }
+					]
+				}
+			}
+		]
+	}
 }
